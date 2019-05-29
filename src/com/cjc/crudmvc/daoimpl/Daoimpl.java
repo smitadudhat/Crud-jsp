@@ -32,7 +32,7 @@ public class Daoimpl implements DaoI {
 		String hql = "from Student where username='" + s.getUsername() + "' and password='" + s.getPassword() + "'";
 		org.hibernate.Query<Student> q = session.createQuery(hql);
 		Student st = (Student) q.uniqueResult();
-		//todo Refactor all the deprecated class. Use updated alternatives for the deprecated classes.
+		//todo Refactor all the deprecated class.
 		if (st != null) {
 			list = new ArrayList<>();
 			list.add(st);
